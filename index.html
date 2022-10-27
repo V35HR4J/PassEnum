@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>PassEnum</title>
   <link rel="stylesheet" href="style.css">
   <script src="myscripts.js"></script>
+
 </head>
 
 <body>
@@ -13,19 +13,18 @@
     <h1>PassEnum</h1>
     <form>
       <div class="txt_field">
-        <input id="first" type="text" required>
+        <input id="first" type="text" onkeyup="word_updown()" required>
         <span></span>
         <label>First Name</label>
       </div>
 
-      <div class="reset"><input type="reset" value="Reset Form"></div>
 
-      <input type="button" value="Enumerate" onclick="printName()">
+      
       <code>
          <div class="wordlist" id="wordlist">
        </div>
       </code>
-      <button onclick="copyFunc()">Copy text</button>
+      <button id="copy-btn" onclick="copyFunc()">Copy text</button>
       <div class="copyright">
         &copy; Copyright <a href="https://twitter.com/GhimireVeshraj" target="_blank">Veshraj</a>
       </div>

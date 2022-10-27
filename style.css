@@ -17,7 +17,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 47vw;
   background: rgb(43, 41, 41);
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(95, 94, 94, 0.05);
@@ -125,9 +125,21 @@ input[type="button"]:hover{
   overflow: auto;
 }
 .copylink{
-  /* margin: 5px; */
-  /* padding: 5px; */
   background: none;
   border: none;
   color: rgb(170, 56, 65);
+}
+
+#copy-btn{
+  background-color: #096209;
+  color: white;
+  outline: none;
+  border: none;
+  padding: .5rem;
+  border-radius: 11px;
+  cursor: pointer;
+}
+#copy-btn:hover{
+  background-color: #095309;
+
 }
