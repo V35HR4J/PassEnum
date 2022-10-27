@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>PassEnum</title>
   <link rel="stylesheet" href="style.css">
   <script src="myscripts.js"></script>
@@ -31,6 +32,9 @@
       </div>
     </form>
   </div>
+  <script>
+    document.querySelector('label').addEventListener('click', function () { document.getElementById("first").focus() });
+  </script>
 </body>
 
 </html>
