@@ -41,7 +41,7 @@ function wordlist_maker(word) {
 // prints all password in pass array to html element
 function printName() {
     hello = document.querySelector('#wordlist');
-    hello.innerHTML = ""
+    hello.innerHTML = "";
     pass.forEach(item => {
         const p = document.createElement("p");
         p.textContent = item
@@ -58,6 +58,6 @@ function copyFunc() {
     window.getSelection().addRange(range); // to select text
     document.execCommand("copy");
     window.getSelection().removeAllRanges();// to deselect
-    alert('Copied to Clipboard');
+    alert('Copied to Clipboard')
 }
 
