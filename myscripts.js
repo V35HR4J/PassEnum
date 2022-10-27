@@ -24,21 +24,16 @@ function printName() {
     }
 }
 
-pass.forEach(item => {
-    const p = document.createElement("p");
-    p.textContent = item
-    hello.append(p)
-})
+var textarea = document.getElementById('wordlist');
+textarea.value = '';
 
+pass.forEach(item => {
+    textarea.value += item + '\n';
+})
 }
 
 function copyFunc(){
-    var range = document.createRange();
-    range.selectNode(document.getElementById("wordlist"));
-    window.getSelection().removeAllRanges(); // clear current selection
-    window.getSelection().addRange(range); // to select text
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();// to deselect
-    alert('Copied to Clipboard')
+    document.querySelector("textarea").select();
+    document.execCommand('copy');
 }
     
