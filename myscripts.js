@@ -30,7 +30,6 @@ textarea.value = '';
 pass.forEach(item => {
     textarea.value += item + '\n';
 })
-
 }
 
 function copyFunc(){
