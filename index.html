@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>PassEnum</title>
   <link rel="stylesheet" href="style.css">
   <script src="myscripts.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
@@ -15,22 +13,16 @@
     <h1>PassEnum</h1>
     <form>
       <div class="txt_field">
-        <input id="first" type="text" required>
+        <input id="first" type="text" onkeyup="word_updown()" required>
         <span></span>
         <label>First Name</label>
-      </div>
-
-      <div class="reset"><input type="reset" value="Reset Form"></div>
-
-      <input type="button" value="Enumerate" onclick="printName()">
+      </div>      
       <code>
-         <div>
-          <textarea readonly class="wordlist" id="wordlist" value="" cols="39"></textarea>
+          <div>
+           <textarea readonly class="wordlist" id="wordlist" value="" cols="39"></textarea>
        </div>
       </code>
-      <div class="container">
-        <button type="button" class="btn btn-success" onclick="copyFunc()">Copy text</button>
-      <div>
+      <button id="copy-btn" onclick="copyFunc()">Copy text</button>
       <div class="copyright">
         &copy; Copyright <a href="https://twitter.com/GhimireVeshraj" target="_blank">Veshraj</a>
       </div>

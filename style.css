@@ -5,6 +5,21 @@
   box-sizing: border-box;
   font-family: 'Ubuntu Mono', monospace;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 body{
   margin: 0;
   padding: 0;
@@ -17,7 +32,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  width: 47vw;
   background: rgb(43, 41, 41);
   border-radius: 10px;
   box-shadow: 10px 10px 15px rgba(95, 94, 94, 0.05);
@@ -125,9 +140,29 @@ input[type="button"]:hover{
   overflow: auto;
 }
 .copylink{
-  /* margin: 5px; */
-  /* padding: 5px; */
   background: none;
   border: none;
   color: rgb(170, 56, 65);
+}
+
+#copy-btn{
+  background-color: #096209;
+  color: white;
+  outline: none;
+  border: none;
+  padding: .5rem;
+  border-radius: 11px;
+  cursor: pointer;
+}
+#copy-btn:hover{
+  background-color: #095309;
+
+}
+
+#wordlist{
+  background-color: #2b2929;
+  width:100%;
+  max-width: 100%;
+  font-size: 1.1rem;
+  scroll-behavior:smooth;
 }
