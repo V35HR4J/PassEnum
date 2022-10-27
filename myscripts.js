@@ -24,18 +24,13 @@ hello=document.querySelector('#wordlist');
 hello.innerHTML = pass;
 }
 
-function myFunction() {
-  // Get the text field
-  var copyText = document.querySelector('#wordlist');
-
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
-
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
-
-  // Alert the copied text
-  alert("Copied  " );
-} 
+function copyFunc(){
+    var range = document.createRange();
+    range.selectNode(document.getElementById("wordlist"));
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
+    alert('Copied to Clipboard')
+}
     
