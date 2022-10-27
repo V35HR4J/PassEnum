@@ -40,24 +40,23 @@ function wordlist_maker(word) {
 }
 // prints all password in pass array to html element
 function printName() {
+    var textarea = document.getElementById('wordlist');
+    textarea.value = '';
     hello = document.querySelector('#wordlist');
     hello.innerHTML = "";
     pass.forEach(item => {
         const p = document.createElement("p");
         p.textContent = item
-        hello.append(p)
+        hello.append(p);
+        textarea.value += item + '\n';
     })
 }
 
 
 // copy to clipboard
 function copyFunc() {
-    var range = document.createRange();
-    range.selectNode(document.getElementById("wordlist"));
-    window.getSelection().removeAllRanges(); // clear current selection
-    window.getSelection().addRange(range); // to select text
-    document.execCommand("copy");
-    window.getSelection().removeAllRanges();// to deselect
+    document.querySelector("textarea").select();
+    document.execCommand('copy');
     alert('Copied to Clipboard')
 }
 
