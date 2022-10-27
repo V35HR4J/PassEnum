@@ -2,7 +2,9 @@ pass=[];
 pass_list = ["1","321","@123","123","1234","@1234","12345","123456","1234567","1234568"]
 var arrayLength = pass_list.length;
 function printName() {
+    pass = []
     hello=document.querySelector('#wordlist');
+    hello.innerHTML = ""
     firstName = document .getElementById("first").value;
     upper=firstName[0].toUpperCase()+firstName.slice(1);
     lower=firstName[0].toLowerCase()+firstName.slice(1);
