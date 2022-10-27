@@ -24,9 +24,13 @@ hello=document.querySelector('#wordlist');
 hello.innerHTML = pass;
 }
 
-// TODO:
-// function copytc() {
-//     let text = quoteText.textContent;
-//     navigator.clipboard.writeText(`${text}`);
-// }
+function copyFunc(){
+    var range = document.createRange();
+    range.selectNode(document.getElementById("wordlist"));
+    window.getSelection().removeAllRanges(); // clear current selection
+    window.getSelection().addRange(range); // to select text
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();// to deselect
+    alert('Copied to Clipboard')
+}
     
