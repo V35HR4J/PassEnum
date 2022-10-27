@@ -161,6 +161,7 @@ input[type="button"]:hover{
 
 #wordlist{
   background-color: #2b2929;
+  width:100%;
   max-width: 100%;
   font-size: 1.1rem;
   scroll-behavior:smooth;
