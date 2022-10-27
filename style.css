@@ -5,6 +5,21 @@
   box-sizing: border-box;
   font-family: 'Ubuntu Mono', monospace;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 body{
   margin: 0;
   padding: 0;
@@ -142,4 +157,11 @@ input[type="button"]:hover{
 #copy-btn:hover{
   background-color: #095309;
 
+}
+
+#wordlist{
+  background-color: #2b2929;
+  width: 100%;
+  font-size: 1.1rem;
+  scroll-behavior:smooth;
 }
