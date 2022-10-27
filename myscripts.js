@@ -36,7 +36,6 @@ function wordlist_maker(word) {
             pass.push(first_letter_lowercase + pass_list[i]);
         }
     }
-
 }
 // prints all password in pass array to html element
 function printName() {
@@ -58,5 +57,6 @@ function copyFunc() {
     document.querySelector("textarea").select();
     document.execCommand('copy');
     alert('Copied to Clipboard')
+
 }
 
