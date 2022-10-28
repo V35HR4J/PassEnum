@@ -1,5 +1,6 @@
 pass = [];
 pass_list = [
+  "",
   "1",
   "321",
   "@123",
@@ -40,26 +41,26 @@ function wordlist_maker(word) {
   firstName = word || document.getElementById("first").value;
   first_letter_uppercase = firstName[0].toUpperCase() + firstName.slice(1);
   first_letter_lowercase = firstName[0].toLowerCase() + firstName.slice(1);
+  console.log(first_letter_uppercase);
 
-  // Iterates through each leets' keys and values to replace
+
+// Iterates through each leets' keys and values to replace
   for (const [key, value] of Object.entries(leets)) {
     if (firstName.includes(key)) {
       const regex = new RegExp(key, "gi");
       replaced = firstName.replace(regex, value);
-      console.log(replaced)
+
       for (var i = 0; i < arrayLength; i++) {
-        pass.push(first_letter_uppercase + pass_list[i]);
-        pass.push(first_letter_lowercase + pass_list[i]);
         pass.push(replaced + pass_list[i]);
-      }
-    } else {
-      for (var i = 0; i < arrayLength; i++) {
-        pass.push(first_letter_uppercase + pass_list[i]);
-        pass.push(first_letter_lowercase + pass_list[i]);
       }
     }
   }
+  for (var i = 0; i < arrayLength; i++) {
+    pass.push(first_letter_uppercase + pass_list[i]);
+    pass.push(first_letter_lowercase + pass_list[i]);
+  }
 }
+
 
 // prints all password in pass array to html element
 function printName() {
