@@ -8,10 +8,17 @@ pass_list = [
   "1234",
   "@1234",
   "12345",
+  "@12345",
   "123#",
   "#123",
   "123@",
   "123#",
+  "@1234567890",
+  "123456789",
+  "@12345678",
+  "12345678"
+
+
 ];
 var arrayLength = pass_list.length;
 
@@ -33,7 +40,25 @@ function word_updown() {
     wordlist_maker(letter);
     word[i] = word[i].toLowerCase();
   }
+printName();
+  
+}
+function down_word() {
+  pass = [];
+  word = document.getElementById("second").value;
+  word = word.toLowerCase();
+  word = word.split("");
+  for (i in word) {
+    word[i] = word[i].toUpperCase();
+    letter = word.join("");
+    wordlist_maker(letter);
+    word[i] = word[i].toLowerCase();
+  }
 
+ printName();
+}
+function totalword(){
+  word_updown+ down_word;
   printName();
 }
 
